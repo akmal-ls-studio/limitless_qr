@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Limitless QR Code</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h2>Limitless QR Generator</h2><br>
+        <div class="container">
+            <input id="main_input" type="text" placeholder="Masukan text disini..."></input><br>
+            <div class="form-group">
+                <label>Resolusi QR-Code :</label>
+                <select id="main_opt_res">
+                    <option>320p</option>
+                    <option>480p</option>
+                    <option>720p</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Warna barcode :</label>
+                <input id="main_opt_forcol" type="color" value="#000000">
+            </div>
+            <div class="form-group">
+                <label>Transparent background :</label>
+                <label class="switch">
+                    <input id="main_opt_trans" type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="form-group">
+                <label>Warna background :</label>
+                <input id="main_opt_backcol" type="color" value="#fffffd">
+            </div>
+            <button id="main_button_input">Generate!</button>
+        </div>
+
+        <div id="main_popup" class="popup">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <div id="main_qr_box"></div>
+                <button id="main_button_download">Download</button>
+            </div>
+        </div>
+        <script src="qrcode.min.js"></script>
+        <script src="main.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    </body>
+</html>
