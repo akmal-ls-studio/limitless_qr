@@ -1,7 +1,9 @@
 # limitless_qr
-Limitless QR Code! Support for all modern browser pc or mobile!
+Limitless QR Code! Support for all modern browser PC or Mobile!
 
-&middot; Free licence!✨<br>
+Buat QR Code anda tidak terbatas, easy to use, input -> modify -> generated!
+
+&middot; Free license!✨<br>
 &middot; Free usage!🔥<br>
 &middot; Free to use!💯
 
