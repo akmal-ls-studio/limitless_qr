@@ -1,8 +1,8 @@
 # limitless_qr
 Limitless QR Code!
 
-&middot; Free licence!\n
-&middot; Free usage!\n
+&middot; Free licence!<br>
+&middot; Free usage!<br>
 &middot; Free to use!
 
 <div align="center">
