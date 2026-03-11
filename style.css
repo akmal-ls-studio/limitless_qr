@@ -8,7 +8,9 @@ body {
 
 h2 {
     font-size: xx-large;
+    align-self: center;
     justify-self: center;
+    text-align: center;
     margin: 10px;
 }
 
@@ -207,4 +209,5 @@ button {
     opacity: 0.5;
     cursor: not-allowed;
     pointer-events: none;
+
  }
