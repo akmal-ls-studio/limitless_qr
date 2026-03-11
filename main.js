@@ -4,7 +4,7 @@ var popup = document.getElementById("main_popup");
 var span = document.getElementsByClassName("close")[0];
 var col2 = document.getElementById("main_opt_backcol");
 var qr_bg_trans = false;
-var curr_qr;
+var curr_qr, down_qr;
 
 document.getElementById("main_opt_trans").addEventListener('change', function() {
     qr_bg_trans = this.checked;
@@ -26,14 +26,17 @@ generated.onclick = function() {
 
     popup.style.display = "block";      
     var bg_color = "#" + ((qr_bg_trans) ? "00":"") + col2.value.substring(1);
-    var res = parseInt(document.getElementById("main_opt_res").value.substring(0, 3)) / 2;
+    var res = document.getElementById("main_opt_res").value.substring(0, 3);
     var col1 = document.getElementById("main_opt_forcol").value;
-    curr_qr = QRCode(JSON.parse(`{"msg":\"${msg}\", "dim":${res}, "ecl":"H", "pal":[\"${col1}\",\"${bg_color}\"]}`));
+    down_qr = QRCode(JSON.parse(`{"msg":\"${msg}\", "dim":${res}, "ecl":"H", "pal":[\"${col1}\",\"${bg_color}\"]}`));
+    curr_qr = QRCode(JSON.parse(`{"msg":\"${msg}\", "ecl":"H", "pal":[\"${col1}\",\"${bg_color}\"]}`));
     main_qr.appendChild(curr_qr);
 }
 
 document.getElementById("main_button_download").onclick = function() {
-    html2canvas(main_qr).then(canvas => {
+    main_qr.removeChild(curr_qr);
+    main_qr.appendChild(down_qr);
+    html2canvas(main_qr, {backgroundColor: null, useCORS: true}).then(canvas => {
         const link = document.createElement('a');
         link.href = canvas.toDataURL("image/png");;
         link.download = 'Limitless_qr.png';
@@ -41,6 +44,9 @@ document.getElementById("main_button_download").onclick = function() {
         link.click();
         document.body.removeChild(link);
     });
+
+    main_qr.removeChild(down_qr);
+    main_qr.appendChild(curr_qr);
 }
 
 span.onclick = function() {
