@@ -110,7 +110,7 @@ input[type="color"]::-webkit-color-swatch-wrapper {
 }
 
 input[type="text"] {
-    width: 96%;
+    width: 94%;
     height: 20pt;
     margin-bottom: 22px;
     padding: 8px;
@@ -211,3 +211,4 @@ button {
     pointer-events: none;
 
  }
+
