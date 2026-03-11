@@ -11,6 +11,7 @@ Buat QR Code anda tidak terbatas, easy to use, input -> modify -> generated!
 <b>v1.20260312</b><br>
 &middot; Get higher resolution.<br>
 &middot; Fix transparent background download.<br>
+&middot; Fix sizing of elements.<br>
 <br>
 <b>v1.20260311</b><br>
 &middot; Fix download button.<br>
